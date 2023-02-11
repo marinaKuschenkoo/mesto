@@ -1,11 +1,14 @@
 .profile__info{
-    max-height: 73px;
     margin-left: 30px;
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 24px;
     grid-column-gap: 18px;
-    grid-row-gap: 16px;
+    grid-row-gap: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 610px;
     
 }
 @media (max-width:885px) {

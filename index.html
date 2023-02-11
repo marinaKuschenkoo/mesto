@@ -14,7 +14,7 @@
         </header>
         <main class="main">
             <section class="profile">
-                <img src="./images/Avatar.png" alt="" class="profile__avatar">
+                <img src="./images/Avatar.png" alt="Фото профиля" class="profile__avatar">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <button class="profile__edit-button" type="button"><img class="profile__edit-button-img" src="./images/Edit_Button.svg" alt="Редактировать"></button>
@@ -26,43 +26,43 @@
                 <div class="element">
                     <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__img">
                     <div class="element__container">
-                        <p class="element__descr">Карачаевск</p>
-                        <button class="element__like-container" name="like"></button>
+                        <h2 class="element__descr">Карачаевск</h2>
+                        <button class="element__like-container" name="like" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="./images/elbrus.png" alt="Эльбрус" class="element__img">
                     <div class="element__container">
-                        <p class="element__descr">Гора Эльбрус</p>
-                        <button class="element__like-container"></button>
+                        <h2 class="element__descr">Гора Эльбрус</h2>
+                        <button class="element__like-container" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="./images/dombay.png" alt="Домбай" class="element__img">
                     <div class="element__container">
-                        <p class="element__descr">Домбай</p>
-                        <button class="element__like-container"></button>
+                        <h2 class="element__descr">Домбай</h2>
+                        <button class="element__like-container" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="./images/elbrus.png" alt="Эльбрус" class="element__img">
                     <div class="element__container">
-                        <p class="element__descr">Гора Эльбрус</p>
-                        <button class="element__like-container"></button>
+                        <h2 class="element__descr">Гора Эльбрус</h2>
+                        <button class="element__like-container" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="./images/dombay.png" alt="Домбай" class="element__img">
                     <div class="element__container">
-                        <p class="element__descr">Домбай</p>
-                        <button class="element__like-container"></button>
+                        <h2 class="element__descr">Домбай</h2>
+                        <button class="element__like-container" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия" class="element__img">
                     <div class="element__container">
-                        <p class="element__descr">Карачаево-Черкессия</p>
-                        <button class="element__like-container"></button>
+                        <h2 class="element__descr">Карачаево-Черкессия</h2>
+                        <button class="element__like-container" type="button"></button>
                     </div>
                 </div>
             </section>
@@ -79,11 +79,11 @@
                     <h2 class="popup__form-title">Редактировать профиль</h2>
                     <fieldset class="form">
                         <label class="form__input-label">
-                            <input type="text" class="form__input popup__name" placeholder="Ваше Имя" value="Жак-Ив Кусто"
+                            <input type="text" class="popup__input popup__input_type_name" placeholder="Ваше Имя" value="Жак-Ив Кусто"
                                     name="name" minlength="2" maxlength="40" required>
                         </label>
                         <label class="form__input-label">
-                            <input type="text" class="form__input popup__work" placeholder="Место работы" value="Исследователь океана"
+                            <input type="text" class="popup__input popup__input_type_work" placeholder="Место работы" value="Исследователь океана"
                                     name="workplace" minlength="2" maxlength="200" required>
                         </label>
                     </fieldset>
@@ -92,6 +92,6 @@
             </div>
         </div>
     </div>
-    <script src="/pages/index.js"></script>
+    <script src="./pages/index.js"></script>
 </body>
 </html>

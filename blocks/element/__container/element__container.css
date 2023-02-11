@@ -1,6 +1,6 @@
 .element__container{
     background-color: #fff;
-    max-height: 80px;
+    /*max-height: 80px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
