@@ -4,8 +4,8 @@ let newAttr=document.querySelector('.popup');
 
 
 openPopup.addEventListener('click', function(event){
-        nameInput.textContent=profileName.value;
-        jobInput.textContent=profileWork.value;
+        nameInput.value=profileName.textContent;
+        jobInput.value=profileWork.textContent;
         newAttr.classList.add('popup_active');
 
     })

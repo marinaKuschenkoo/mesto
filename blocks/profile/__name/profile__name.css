@@ -10,19 +10,15 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-@media (max-width:850px) {
+@media (max-width:885px) {
     .profile__name{
         max-width: 500px;
     }
 }
-@media (max-width:590px) {
+@media (max-width:600px) {
     .profile__name{
         font-size: 27px;
         line-height: 33px;
-    }
-}
-@media (max-width:400px) {
-    .profile__name{
         max-width: 180px;
     }
 }
