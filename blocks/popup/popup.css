@@ -6,7 +6,7 @@
     display: none;
     top: 0;
     right: 0;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 @media (max-width:590px) {

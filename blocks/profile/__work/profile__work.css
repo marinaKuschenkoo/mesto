@@ -14,15 +14,10 @@
         max-width: 500px;
     }
 }
-@media (max-width:590px) {
+@media (max-width:600px) {
     .profile__work{
         font-size: 14px;
         line-height: 17px;
-        max-width: 300px;
-    }
-}
-@media (max-width:400px) {
-    .profile__work{
         max-width: 180px;
     }
 }
