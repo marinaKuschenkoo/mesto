@@ -23,72 +23,69 @@
                 <button class="profile__add-button" type="button"><img src="./images/plus.svg" alt="Кнопка Добавить"></button>
             </section>
             <section class="elements">
-                <div class="element">
-                    <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__img">
-                    <div class="element__container">
-                        <h2 class="element__descr">Карачаевск</h2>
-                        <button class="element__like-container" name="like" type="button"></button>
+                <template id="element">
+                    <div class="element">
+                        <button class="element__trash" type="button"></button>
+                        <img class="element__img" src="#" alt="Картинка места">
+                        <div class="element__container">
+                            <h2 class="element__descr"></h2>
+                            <button class="element__like-container"></button>
+                        </div>
                     </div>
-                </div>
-                <div class="element">
-                    <img src="./images/elbrus.png" alt="Эльбрус" class="element__img">
-                    <div class="element__container">
-                        <h2 class="element__descr">Гора Эльбрус</h2>
-                        <button class="element__like-container" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/dombay.png" alt="Домбай" class="element__img">
-                    <div class="element__container">
-                        <h2 class="element__descr">Домбай</h2>
-                        <button class="element__like-container" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/elbrus.png" alt="Эльбрус" class="element__img">
-                    <div class="element__container">
-                        <h2 class="element__descr">Гора Эльбрус</h2>
-                        <button class="element__like-container" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/dombay.png" alt="Домбай" class="element__img">
-                    <div class="element__container">
-                        <h2 class="element__descr">Домбай</h2>
-                        <button class="element__like-container" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия" class="element__img">
-                    <div class="element__container">
-                        <h2 class="element__descr">Карачаево-Черкессия</h2>
-                        <button class="element__like-container" type="button"></button>
-                    </div>
-                </div>
+                </template>
             </section>
-        </main>
+     </main>
         <footer class="footer">
             <p class="footer__text">
                 © 2020 Mesto Russia
             </p>
         </footer>
-        <div class="popup">
-            <div class="popup__form-container">
-                <button class="popup__exit-button" type="button"></button>
-                <form class="popup__form" name="profile_form" novalidate>
-                    <h2 class="popup__form-title">Редактировать профиль</h2>
-                    <fieldset class="form">
-                        <label class="form__input-label">
-                            <input type="text" class="popup__input popup__input_type_name" placeholder="Ваше Имя" value="Жак-Ив Кусто"
-                                    name="name" minlength="2" maxlength="40" required>
-                        </label>
-                        <label class="form__input-label">
-                            <input type="text" class="popup__input popup__input_type_work" placeholder="Место работы" value="Исследователь океана"
-                                    name="workplace" minlength="2" maxlength="200" required>
-                        </label>
-                    </fieldset>
-                    <button class="popup__save-button" type="submit">Сохранить</button>
-                </form>
+    </div>
+    <div class="popup popup_edit-profile">
+        <div class="popup__form-container">
+            <button class="popup__exit-button popup__edit-close" type="button"></button>
+            <form class="popup__form popup__form_editProfile" name="profile_form" novalidate>
+                <h2 class="popup__form-title">Редактировать профиль</h2>
+                <fieldset class="form">
+                    <label class="form__input-label">
+                        <input type="text" class="popup__input popup__input_type_name" placeholder="Ваше Имя" value="Жак-Ив Кусто"
+                                name="name" minlength="2" maxlength="40" required>
+                    </label>
+                    <label class="form__input-label">
+                        <input type="text" class="popup__input popup__input_type_work" placeholder="Место работы" value="Исследователь океана"
+                                name="workplace" minlength="2" maxlength="200" required>
+                    </label>
+                </fieldset>
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_add-items">
+        <div class="popup__form-container">
+            <button class="popup__exit-button popup__add-close" type="button"></button>
+            <form class="popup__form popup__form_saveCard" name="profile_form" novalidate>
+                <h2 class="popup__form-title">Новое место</h2>
+                <fieldset class="form">
+                    <label class="form__input-label">
+                        <input type="text" class="popup__input popup__input_type_placeName" placeholder="Название"
+                                name="placeName" minlength="2" maxlength="40" required>
+                    </label>
+                    <label class="form__input-label">
+                        <input type="text" class="popup__input popup__input_type_placeImage" placeholder="Ссылка на картинку"
+                                name="placeImage" minlength="2" required>
+                    </label>
+                </fieldset>
+                <button class="popup__save-button" type="submit">Создать</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup__full-image">
+        <div class="popup__container">
+            <div class="popup__image-container">
+            <button class="popup__image-close" type="button"></button>
+            
+                <img src="" alt="" class="popup__image">
+                <figcaption class="popup__image-text"></figcaption>
             </div>
         </div>
     </div>

@@ -14,8 +14,4 @@
     cursor: pointer;
     opacity: 0.5;
 }
-.element__like-container:active{
-    cursor: pointer;
-    opacity: 1;
-    background-image: url("../../../images/like_black.svg");
-}
+

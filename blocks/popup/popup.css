@@ -3,14 +3,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
     position: fixed;
-    display: none;
     top: 0;
     right: 0;
     justify-content: center;
     align-items: center;
-}
-@media (max-width:590px) {
-    .popup{
-        top:-73px;
-    }
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.55s, 0.55s visibility;
 }
