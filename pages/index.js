@@ -41,7 +41,7 @@ const closeButtons=document.querySelectorAll('.popup__exit-button');
 const popups=document.querySelectorAll('.popup');
 const popupAddClose=document.querySelector('.popup__add-close');
 const popupEditClose=document.querySelector('.popup__edit-close');
-const formElement = document.querySelector('.popup__form'); 
+const formElement = popup.querySelector('.popup__form'); 
 const nameInput = formElement.querySelector('[name="name"]');
 const jobInput = formElement.querySelector('[name="workplace"]');
 const profileName=document.querySelector('.profile__name');
@@ -123,6 +123,7 @@ function handleFormSabmitAddButton(evt){
   evt.preventDefault(); 
   renderCard(inputPlaceName.value, inputPlaceImg.value);
   closePopup(popupAddItems);
+  evt.target.reset();
 }
 displayCards();
 editProfileForm.addEventListener('submit', handleFormSubmit);
