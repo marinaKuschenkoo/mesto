@@ -1,0 +1,5 @@
+.popup__save-button_inactive {
+    background-color: #fff;
+    border: 1px solid #000000;
+    color: rgba(0, 0, 0, 0.2);
+}
