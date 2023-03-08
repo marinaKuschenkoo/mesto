@@ -1,9 +1,9 @@
 //ПР 6
-const hideError = (errorElement) =>{
+const hideError = (errorElement,options) =>{
   errorElement.innerText='';
   errorElement.classList.remove(options.errorActiveSelector);
 }
-const showError=(errorElement, message)=>{
+const showError=(errorElement, message,options)=>{
   errorElement.innerText=message;
   errorElement.classList.add(options.errorActiveSelector);
 }
@@ -20,18 +20,18 @@ const toggleInputState = (inputElement,options) =>{
   const inputSectionElement=inputElement.closest(options.inputSectionSelector);
   const errorElement=inputSectionElement.querySelector(options.errorSelector);
   if (isValid){
-    hideError(errorElement,options.errorActiveSelector);//////
-  } else{ ////////
+    hideError(errorElement,options.errorActiveSelector);
+  } else{
    showError(errorElement, inputElement.validationMessage,options.errorActiveSelector)
   }
 }
 
 const toggleButtonState=(inputs,submitElement,options)=>{
-  const formIsValid=inputs.every((inputElement)=>{
+  const isFormValid=inputs.every((inputElement)=>{
     return inputElement.validity.valid;
   })
   
-  if (formIsValid){
+  if (isFormValid){
     enableButton(submitElement,options);
   } else {
     disableButton(submitElement,options);
