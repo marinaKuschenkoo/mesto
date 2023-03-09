@@ -47,9 +47,6 @@ function initExitPopupButtons(){
       closePopup(btn.closest('.popup'))
     })
   })
-  imgClose.addEventListener('click',function(){
-    closePopup(fullImgPopup);
-})
 popups.forEach(pop=>{
   pop.addEventListener('click',function(evt){
     if (evt.currentTarget === evt.target) {
@@ -73,7 +70,6 @@ editButton.addEventListener('click', function(event){
   })
 addButton.addEventListener('click', function(event){
     openPopup(popupAddItems);
-    enableValidation(options);
   })
 
 
@@ -88,7 +84,7 @@ function handleFormAddSubmit(evt){
   evt.preventDefault(); 
   renderCard(inputPlaceName.value, inputPlaceImg.value);
   closePopup(popupAddItems);
-  const saveBtn=document.querySelector('.popup__save-button');
+  const saveBtn=popupAddItems.querySelector('.popup__save-button');
   this.closest('form').reset();
   disableButton(saveBtn,options)
 }

@@ -20,9 +20,9 @@ const toggleInputState = (inputElement,options) =>{
   const inputSectionElement=inputElement.closest(options.inputSectionSelector);
   const errorElement=inputSectionElement.querySelector(options.errorSelector);
   if (isValid){
-    hideError(errorElement,options.errorActiveSelector);
+    hideError(errorElement,options);
   } else{
-   showError(errorElement, inputElement.validationMessage,options.errorActiveSelector)
+   showError(errorElement, inputElement.validationMessage,options)
   }
 }
 
