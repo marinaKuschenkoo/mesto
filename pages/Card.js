@@ -1,4 +1,3 @@
-import {fullImgPopup } from "./constans.js";
 export default class Card{
     constructor(data, templateSelector,openImg) {
       this._templateSelector = templateSelector;
@@ -32,7 +31,8 @@ export default class Card{
         }
 
         _handleDelete() {
-            this._buttonDelete.closest(".element").remove();
+            this._element.remove();
+            this._element = null;
         }
         generateCard () {
             this._element = this._getTemplate();

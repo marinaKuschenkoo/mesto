@@ -1,5 +1,5 @@
 import Card from "./Card.js";
-import FormValidator from "./validate.js";
+import FormValidator from "./FormValidator.js";
 import {
   initialCards,
   editButton,
@@ -74,7 +74,7 @@ editButton.addEventListener('click', function(event){
     openPopup(popupEditProfile);
   })
 addButton.addEventListener('click', function(event){
-    formCardValidator._disableButton();
+    formCardValidator.disableButton();
     openPopup(popupAddItems);
   })
 
@@ -94,8 +94,7 @@ function handleFormAddSubmit(evt){
   };
   elements.prepend(generateCard(data));
   closePopup(popupAddItems);
-  const saveBtn=popupAddItems.querySelector('.popup__save-button');
-  this.closest('form').reset();
+  addCardForm.reset();
 }
 displayInitialCards();
 editProfileForm.addEventListener('submit', handleFormEditSubmit);

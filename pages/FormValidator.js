@@ -34,7 +34,7 @@ export default class FormValidator{
     this._buttonElement.removeAttribute('disabled');
   }
 
-  _disableButton(){
+  disableButton(){
     this._buttonElement.setAttribute('disabled','true');
     this._buttonElement.classList.add(this._disableButtonClass);
   }
@@ -67,9 +67,6 @@ export default class FormValidator{
         this._toggleInputState(inputElement);
         this._toggleButtonState();
       });
-    });
-    this._formElement.addEventListener("submit",(evt)=>{
-      evt.preventDefault();
     });
   }
 
