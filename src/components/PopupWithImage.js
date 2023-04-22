@@ -1,12 +1,11 @@
 import Popup from "./Popup.js";
-import {fullImage, imgText} from "../utils/constans.js"
 
 export default class PopupWithImage extends Popup{
 
     constructor(popupSelector){
         super(popupSelector);
-        this.popupFigureImage = fullImage;
-        this.popupFigureFigurcaption = imgText;
+        this.popupFigureImage = this._popup.querySelector('.popup__image');;
+        this.popupFigureFigurcaption = this._popup.querySelector('.popup__image-text');;
     }
 
     open(element){

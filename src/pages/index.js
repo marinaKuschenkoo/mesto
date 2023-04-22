@@ -26,7 +26,7 @@ formProfileValidator.enableValidation();
 const formCardValidator = new FormValidator(options, formCard);
 formCardValidator.enableValidation();
 
-const user = new UserInfo({nameSelector: profileName, aboutSelector: profileWork});
+const user = new UserInfo({name: profileName, about: profileWork});
 const popupWithImage = new PopupWithImage(fullImgPopup);
 
 const createCard = (item) => {
