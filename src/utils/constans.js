@@ -24,6 +24,16 @@ export const initialCards = [
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ]; 
+  export const options={
+    formSelector: '.popup__form',
+    submitSelector: '.popup__save-button',
+    inputSelector: '.popup__input',
+    inputSectionSelector: '.form__input-label',
+    errorSelector:'.popup__input-error',
+    disableButtonClass:'popup__save-button_inactive',
+    errorActiveSelector: 'popup__input-error_active',
+  }
+
   export const editButton = document.querySelector('.profile__edit-button');
   export const closeButton=document.querySelector('.popup__exit-button');
   export const addButton=document.querySelector('.profile__add-button')
@@ -49,16 +59,9 @@ export const initialCards = [
   export const saveButton=document.querySelector('.popup__save-button');
   export const editProfileForm=document.querySelector('.popup__form_editProfile');
   export const addCardForm=document.querySelector('.popup__form_saveCard');
+  export const inputName=document.querySelector('.popup__input_type_name')
+  export const inputWork=document.querySelector('.popup__input_type_work')
   export const inputPlaceName=document.querySelector('.popup__input_type_placeName');
   export const inputPlaceImg=document.querySelector('.popup__input_type_placeImage');
   export const formEditProfile = document.forms["profile_form"];
   export const formCard = document.forms['add_form'];
-  const options={
-    formSelector: '.popup__form',
-    submitSelector: '.popup__save-button',
-    inputSelector: '.popup__input',
-    inputSectionSelector: '.form__input-label',
-    errorSelector:'.popup__input-error',
-    disableButtonClass:'popup__save-button_inactive',
-    errorActiveSelector: 'popup__input-error_active',
-  }

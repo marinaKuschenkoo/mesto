@@ -14,7 +14,6 @@ export default class FormValidator{
     );
     this._buttonElement = this._formElement.querySelector(this._submitSelector);
   }
-
   _showError(inputElement){
     this.errorElement=inputElement.nextElementSibling;
     this.errorElement.classList.add(this._errorActiveSelector);
