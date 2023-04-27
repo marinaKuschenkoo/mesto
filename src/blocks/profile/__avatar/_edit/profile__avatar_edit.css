@@ -1,0 +1,8 @@
+.profile__avatar_edit{
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    padding: 47px;
+    box-sizing: border-box;    
+    z-index: -1;
+}
