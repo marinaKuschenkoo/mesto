@@ -69,13 +69,6 @@ export default class Api {
       })
     }).then(this._checkResponse);
   }
-  deleteCard(cardId) {
-    return fetch(`${this._baseUrl}/cards/${cardId}`, {
-      method: 'DELETE',
-      headers: this.headers,
-    })
-    .then(this._checkResponse)
-  }
   changeLikeStatus(id, isLiked) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
       method: isLiked ? 'PUT' : 'DELETE',
@@ -83,6 +76,4 @@ export default class Api {
     })
     .then(this._checkResponse)
   }
-
-
   }

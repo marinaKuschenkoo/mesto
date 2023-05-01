@@ -48,7 +48,6 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
   .then(([userData, cardsData]) => {    
     userId = userData._id;
     user.setUserInfo(userData);
-    //cardsData.forEach((card) => {
       displayInitialCards.renderItems(cardsData);    
     user.setAvatar(userData);
   })
@@ -80,12 +79,13 @@ const renderCard = (element) => {
         })
         .catch(err => console.log(err));
     });
-  }}).generateCard();
-  
- displayInitialCards.addItem(card);
- 
+  }});
+  const cardElement =  card.generateCard();
+  return cardElement;
 }
-const displayInitialCards = new Section({renderer: renderCard}, ".elements");
+const displayInitialCards = new Section({renderer: (item)=>{
+  displayInitialCards.addItem(renderCard(item))
+}}, ".elements");
 
 
 const popupEdit = new PopupWithForm(popupEditProfile,{ 
@@ -120,7 +120,7 @@ profileAvatar.addEventListener('click',()=>{
 const popupAdd = new PopupWithForm(popupAddItems, {
   handleFormSubmit: (item) => {
   api.createNewCard(item).then((res) => {
-      renderCard(res);
+      displayInitialCards.addItem(renderCard(res));
       popupAdd.close();
     })
     .catch((err) => console.error(err))
