@@ -20,11 +20,19 @@ export default class PopupWithForm extends Popup{
             evt.preventDefault();
             this._handleFormSubmit(this._getInputValues());
             this.renderLoading(true);
-            this.close();
+            //this.close();
         });
     }
     close(){
         super.close();
         this._popupForm.reset();
     }
+
+    renderLoading(isLoading, text) {
+        if (isLoading) {
+          this._buttonSubmit.textContent = 'Сохранение...';
+        } else {
+          this._buttonSubmit.textContent = text;
+        }
+      }
 }

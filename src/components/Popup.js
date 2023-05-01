@@ -2,7 +2,6 @@ export default class Popup{
     constructor(popup){
         this._popup=popup;
         this._closeBtn = this._popup.querySelector('.popup__exit-button');
-        this._buttonSubmit=this._popup.querySelector('.popup__save-button')
       }
     open(){
         this._popup.classList.add('popup_active');
@@ -27,11 +26,5 @@ export default class Popup{
         this._closeBtn.addEventListener('click', () => {this.close()})
         this._popup.addEventListener('mousedown', this._closePopupOverlay)
       }
-      renderLoading(isLoading, text) {
-        if (isLoading) {
-          this._buttonSubmit.textContent = 'Сохранение...';
-        } else {
-          this._buttonSubmit.textContent = text;
-        }
-      }
+
 }
