@@ -69,34 +69,12 @@ export default class Api {
       })
     }).then(this._checkResponse);
   }
-  /*toggleLike(id,method) {
-    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: method,
-      headers: this._headers,
-    })
-    .then(res => {
-      if (res.ok) {
-          return res.json();
-      }
-  })
-    .then(this._handleResponse)
-  }*/
-
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
       headers: this.headers,
     })
     .then(this._checkResponse)
-  }
-
-  deleteLike(cardId) {
-    return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-      method: 'DELETE',
-      headers: this.headers,
-    })
-    .then(this._checkResponse
-      )
   }
   changeLikeStatus(id, isLiked) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
